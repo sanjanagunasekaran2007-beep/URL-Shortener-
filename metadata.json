@@ -1,0 +1,6 @@
+{
+  "name": "LinkSnap",
+  "description": "A modern, responsive URL shortener with a history dashboard, custom alias support, click tracking, and QR code generation.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

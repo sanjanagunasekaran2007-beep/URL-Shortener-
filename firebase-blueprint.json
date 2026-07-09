@@ -1,0 +1,31 @@
+{
+  "entities": {
+    "Link": {
+      "title": "Link",
+      "description": "Represents a shortened URL and its analytics.",
+      "type": "object",
+      "properties": {
+        "originalUrl": {
+          "type": "string",
+          "format": "uri",
+          "description": "The original long destination URL."
+        },
+        "createdAt": {
+          "type": "integer",
+          "description": "Timestamp in milliseconds when the link was created."
+        },
+        "clicks": {
+          "type": "integer",
+          "description": "The click counter for redirection tracking."
+        }
+      },
+      "required": ["originalUrl", "createdAt", "clicks"]
+    }
+  },
+  "firestore": {
+    "links/{linkId}": {
+      "schema": "Link",
+      "description": "Collection of shortened links indexed by their short code or custom alias."
+    }
+  }
+}
